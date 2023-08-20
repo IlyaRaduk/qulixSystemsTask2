@@ -1,0 +1,128 @@
+.insurance {
+    padding: 60px 0px 0px 0px;
+
+    &__row {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 8.5%;
+    }
+
+    &__title {
+        padding-top: 45px;
+        color: $subtitleColor;
+        font-size: 40px;
+        font-weight: 600;
+        max-width: 416px;
+        flex: 0 1 416px;
+    }
+
+    &__list {
+        flex: 1 0 508px;
+        display: flex;
+        justify-content: flex-start;
+        gap: 60px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1px;
+        @include animation();
+
+        &:nth-child(1) {
+            max-width: 182px;
+        }
+
+        &:nth-child(2) {
+            max-width: 256px;
+        }
+    }
+
+    &__img {}
+
+    &__text {
+        color: #95A7B8;
+        text-align: center;
+    }
+}
+
+@media(max-width:1300px) {
+    .insurance {
+        padding: 45px 0px 0px 0px;
+
+        &__row {
+            gap: 3%;
+        }
+    }
+}
+
+@media(max-width:1020px) {
+    .insurance {
+        padding: 55px 0px 0px 0px;
+
+        &__title {
+            max-width: auto;
+            flex: 1 0 34%;
+        }
+
+        &__list {
+            flex: 1 0 46%;
+            gap: 30px;
+        }
+    }
+}
+
+@media(max-width:730px) {
+    .insurance {
+        padding: 10px 0px 0px 0px;
+
+        &__row {
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        &__title {
+            max-width: auto;
+            flex: 1 0 100%;
+            text-align: center;
+        }
+
+        &__list {
+            flex: 1 0 98%;
+            gap: 0px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1px;
+            width: 45%;
+
+            &:nth-child(1) {
+                max-width: none;
+                flex: 1 1;
+            }
+
+            &:nth-child(2) {
+                max-width: none;
+                flex: 1 1;
+            }
+        }
+
+        &__img {
+            width: 100%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+    }
+}

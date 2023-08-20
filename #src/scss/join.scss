@@ -1,0 +1,35 @@
+.join {
+    padding: 40px 0px;
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        color: $titleColor;
+        font-size: 56px;
+        font-weight: 600;
+        margin-bottom: 41px;
+        text-align: center;
+    }
+
+    &__text {
+        color: #95A7B8;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .social {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+@media(max-width:730px) {
+    .join {
+        padding: 60px 0px 40px 0px;
+    }
+}

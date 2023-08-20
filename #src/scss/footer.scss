@@ -1,0 +1,26 @@
+.footer {
+    background: #F4F5F6;
+    padding: 13px 0px;
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__list {
+        display: flex;
+        gap: 80px;
+    }
+
+    &__item {
+        color: $primaryColor;
+    }
+
+    &__text {
+        color: #95A7B8;
+        font-size: 12px;
+        line-height: 24px;
+    }
+}

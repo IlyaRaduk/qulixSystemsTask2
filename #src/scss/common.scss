@@ -1,0 +1,53 @@
+@mixin arrow($position, $height) {
+    content: ' ';
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
+    bottom: -$height;
+    left: calc($position - 8.5px);
+    display: block;
+    width: 17px;
+    height: $height;
+    background: url('./../img/arrow.svg') no-repeat;
+    background-size: contain;
+}
+
+@mixin animation() {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
+    &.active {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+$primaryColor: #202030;
+$titleColor: #000;
+$subtitleColor: #17BEBB;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: $primaryColor;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+@media(max-width:1300px) {
+    .container {
+        padding: 0 24px;
+    }
+}
